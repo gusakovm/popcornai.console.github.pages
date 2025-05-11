@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://storage.yandexcloud.net/893264981267387356145745696564/p/1746799122338-163ec0c8-cd3e-4839-9c6f-6e74e8767053.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PopcornAI Console</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f5f5f5;
+      }
+      .container {
+        text-align: center;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        width: 90%;
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 1rem;
+      }
+      h2 {
+        color: #555;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        color: #666;
+        line-height: 1.6;
+        text-align: left;
+      }
+      .logo {
+        width: 120px;
+        margin-bottom: 1rem;
+      }
+      .button {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        text-decoration: none;
+        margin-top: 1rem;
+        transition: background-color 0.3s;
+      }
+      .button:hover {
+        background-color: #0056b3;
+      }
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+      .feature {
+        background-color: #f9f9f9;
+        border-radius: 6px;
+        padding: 1rem;
+        width: calc(33.333% - 1rem);
+        min-width: 200px;
+        box-sizing: border-box;
+        text-align: left;
+      }
+      .feature h3 {
+        margin-top: 0;
+        color: #444;
+      }
+      .feature p {
+        margin-bottom: 0;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 768px) {
+        .feature {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://storage.yandexcloud.net/893264981267387356145745696564/p/uhobgjcickstnxqkjvwovhloopnm.svg" alt="Логотип" class="logo" />
+      <h1>PopcornAI Console</h1>
+      <p>
+        PopcornAI Console - это динамическая административная панель, где контент и код страниц загружаются через n8n webhooks. 
+        Авторизация осуществляется через Supabase. Система разработана для простоты использования и гибкости, 
+        позволяя легко создавать новые страницы администрирования без изменения основного приложения.
+      </p>
+      
+      <h2>Ключевые особенности</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Динамическая загрузка контента</h3>
+          <p>Весь контент и код страниц загружаются динамически через n8n webhooks</p>
+        </div>
+        <div class="feature">
+          <h3>Простая авторизация</h3>
+          <p>Интеграция с Supabase для авторизации по логину и паролю</p>
+        </div>
+        <div class="feature">
+          <h3>Гибкая система ролей</h3>
+          <p>Доступ к ресурсам на основе ролей пользователя</p>
+        </div>
+        <div class="feature">
+          <h3>Динамическое меню</h3>
+          <p>Меню формируется на основе прав доступа пользователя</p>
+        </div>
+        <div class="feature">
+          <h3>Современный UI</h3>
+          <p>UI на основе shadcn/ui: современный и консистентный пользовательский интерфейс</p>
+        </div>
+        <div class="feature">
+          <h3>Сохранение метаданных</h3>
+          <p>Автоматическое сохранение токенов для использования между сессиями</p>
+        </div>
+      </div>
+      
+      <h2>Документация</h2>
+      <p>
+        Подробная документация доступна в репозитории проекта. Она включает в себя информацию об архитектуре, 
+        технический стек, инструкции по настройке и использованию, а также руководство по разработке.
+      </p>
+      
+      <a href="https://github.com/your-username/popcornai-console" class="button">Перейти в репозиторий</a>
+    </div>
+  </body>
+</html>
