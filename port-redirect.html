@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Перенаправление на правильный порт</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 500px;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .spinner {
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      border-top: 4px solid #3498db;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 1rem auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Перенаправление...</div>
+    <div class="spinner"></div>
+    <p>Пожалуйста, подождите, вы будете перенаправлены на правильный порт.</p>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      try {
+        // Получаем текущий URL
+        const currentUrl = new URL(window.location.href);
+        
+        // Получаем параметры из URL
+        const token = currentUrl.searchParams.get('token');
+        const type = currentUrl.searchParams.get('type');
+        
+        if (token && type === 'recovery') {
+          // Если есть параметры token и type=recovery, перенаправляем на порт 3001 с параметрами в хэше
+          window.location.replace(`http://localhost:3001/#type=recovery&token=${token}`);
+        } else {
+          // Если параметров нет, просто перенаправляем на порт 3001
+          window.location.replace('http://localhost:3001');
+        }
+      } catch (err) {
+        console.error('Redirect error:', err);
+        // В случае ошибки, перенаправляем на порт 3001 без параметров
+        window.location.replace('http://localhost:3001');
+      }
+    });
+  </script>
+</body>
+</html>
