@@ -9,5 +9,5 @@ function Dashboard() { const [dashboardData, setDashboardData] = React.useState(
 }
 const exportedComponent = Dashboard;
   
-  return dashboard;
+  return Dashboard;
 }
