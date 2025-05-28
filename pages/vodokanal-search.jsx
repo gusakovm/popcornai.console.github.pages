@@ -1,4 +1,3 @@
-import { n8nFetch } from '../../lib/n8n';
 const generateSessionId = () => { return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) { const r = Math.random() * 16 | 0; const v = c === 'x' ? r : (r & 0x3 | 0x8); return v.toString(16); });
 };
 const getUserEmail = () => { try { const authData = localStorage.getItem('app-auth-metadata'); if (!authData) return null; const parsedData = JSON.parse(authData); return parsedData?.email || null; } catch (error) { console.error('Ошибка при получении email пользователя:', error); return null; }
